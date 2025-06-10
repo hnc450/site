@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+header{
+    background: linear-gradient(to right, #50e3c2,  #5796de);
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
