@@ -4,4 +4,5 @@
 
 ```
     git ini
+    git remote add origin  ssh_origin
 ```
