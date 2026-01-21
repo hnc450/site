@@ -8,6 +8,8 @@
     git log --online pour 
     git commit --amend 
     git branch  branche_name
+    git merge branche_name
+    git status
 
 ```
 
@@ -21,4 +23,17 @@
 
 ```
    git checkout branche_name
+```
+
+## Pour merge des modifications d une branche à une autre
+
+```
+  git merge branche_name
+```
+
+
+## Pour voir l etat du repos 
+
+```
+  git status
 ```
