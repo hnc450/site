@@ -7,7 +7,7 @@
     git remote add origin  ssh_origin
     git log --online pour 
     git commit --amend 
-    git branch -b branche_name
+    git branch  branche_name
 
 ```
 
