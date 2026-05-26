@@ -1,30 +1,28 @@
 name: Deployement-to-zetsu-account
 on:
- push: 
-   branches:
-     - main
+  push: 
+    branches:
+      - main
 permissions: 
-   contents: write
+  contents: write
 jobs:
-   deploy:
-      name: run-on-machine
-      runs-on: ubuntu-24.04
+  deploy:
+    name: run-on-machine
+    runs-on: ubuntu-24.04
 
-      steps:
-         - name: chekout-repository-code-in-vm
-           uses: actions/checkout@4
+    steps:
+      - name: chekout-repository-code-in-vm
+        uses: actions/checkout@v4
 
-         - name: ssh-deployement
-           uses: appleboy/ssh-action@master
-           with:
-             host: ${{ secrets.IP }}
-             username: ${{ secrets.USER }}
-             password: ${{ secrets.PASSWORD }}
-             port: 22
-             script: |
-               cd /home/zetsu/Desktop/site/
-               rm -rf *
-               git clone https://github.com/hnc450/site.git .
-               rm -rf *.md *.txt .git
-               
-  
+      - name: ssh-deployement
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.IP }}
+          username: ${{ secrets.USER }}
+          password: ${{ secrets.PASSWORD }}
+          port: 22
+          script: |
+            cd /home/zetsu/Desktop/site/
+            rm -rf *
+            git clone https://github.com/hnc450/site.git .
+            rm -rf *.md *.txt .git
