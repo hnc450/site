@@ -22,7 +22,7 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: 22
           script: |
-            cd /home/zetsu/Desktop/site/
-            rm -rf *
-            git clone https://github.com/hnc450/site.git .
-            rm -rf *.md *.txt .git
+            cd /var/www/blog/
+            echo ${{ secrets.PASSWORD }} | sudo -S rm -rf *
+            echo ${{ secrets.PASSWORD }} | sudo -S  git clone https://github.com/hnc450/site.git .
+            echo ${{ secrets.PASSWORD }} | sudo -S rm -rf *.md *.txt .git
