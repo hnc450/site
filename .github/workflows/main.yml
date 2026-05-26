@@ -28,5 +28,5 @@ jobs:
             echo ${{ secrets.PASSWORD }} | sudo -S rm -rf /var/www/blog/
             echo ${{ secrets.PASSWORD }} | sudo -S mv blog /var/www/
             echo ${{ secrets.PASSWORD }} | sudo -S rm -rf *.md *.txt 
-            echo ${{ secrets.PASSWORD }} | sudo -S rm -rf .git
-            echo ${{ secrets.PASSWORD }} | sudo -S rm -rf .github
+            rm -rf .git
+            rm -rf .github
