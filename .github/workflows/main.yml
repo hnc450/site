@@ -25,8 +25,13 @@ jobs:
             cd /home/${{ secrets.USER }}/Desktop/
             rm -rf blog
             git clone https://github.com/hnc450/site.git blog 
-            echo ${{ secrets.PASSWORD }} | sudo -S rm -rf /var/www/blog/
-            echo ${{ secrets.PASSWORD }} | sudo -S mv blog /var/www/
-            echo ${{ secrets.PASSWORD }} | sudo -S rm -rf *.md *.txt 
+            cd blog
             rm -rf .git
             rm -rf .github
+            rm -rf *.md
+            cd ..
+            echo ${{ secrets.PASSWORD }} | sudo -S rm -rf /var/www/blog/
+            echo ${{ secrets.PASSWORD }} | sudo -S mv blog /var/www/
+           
+            
+          
