@@ -22,7 +22,7 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: 22
           script: |
-            cd /home/${{ secrets.USER }}/Desktop/
+            cd /home/${{ secrets.USER }}/Deskt\op/
             rm -rf blog
             git clone https://github.com/hnc450/site.git blog 
             cd blog
