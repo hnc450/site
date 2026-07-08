@@ -22,16 +22,16 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: 22
           script: |
-            cd /home/${{ secrets.USER }}/Deskt\op/
-            rm -rf blog
-            git clone https://github.com/hnc450/site.git blog 
-            cd blog
+            cd /home/${{ secrets.USER }}/Desktop/
+            rm -rf blog-zetsu.duckdns.org
+            git clone https://github.com/hnc450/site.git blog-zetsu.duckdns.org
+            cd blog-zetsu.duckdns.org
             rm -rf .git
             rm -rf .github
             rm -rf *.md
             cd ..
-            echo ${{ secrets.PASSWORD }} | sudo -S rm -rf /var/www/blog/
-            echo ${{ secrets.PASSWORD }} | sudo -S mv blog /var/www/
+            echo ${{ secrets.PASSWORD }} | sudo -S rm -rf /var/www/blog-zetsu.duckdns.org/
+            echo ${{ secrets.PASSWORD }} | sudo -S mv blog-zetsu.duckdns.org /var/www/
            
             
           
